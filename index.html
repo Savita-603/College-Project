@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smoke Detection Monitoring System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <span class="brand-icon">♨</span>
+            <div>
+                <strong>SmokeWatch</strong>
+                <small>Monitoring System</small>
+            </div>
+        </div>
+
+        <nav>
+            <a class="active" href="#dashboard">▦ Dashboard</a>
+            <a href="#sensors">⌁ Sensors</a>
+            <a href="#alerts">⚑ Alerts</a>
+            <a href="#reports">▤ Reports</a>
+        </nav>
+
+        <div class="sidebar-note">
+            <span class="dot green"></span>
+            System online
+            <small>Demo interface</small>
+        </div>
+
+    </aside>
+
+    <main>
+
+        <header>
+
+            <div>
+                <p class="eyebrow">SAFETY & MONITORING</p>
+
+                <h1>Smoke Detection Dashboard</h1>
+
+                <p class="subtitle">
+                    Monitor sensor readings and smoke alerts in real time.
+                </p>
+            </div>
+
+            <div class="header-right">
+
+                <span class="status-pill">
+                    <span class="dot green"></span>
+                    Operational
+                </span>
+
+                <span class="avatar">SM</span>
+
+                <button class="logout-btn" id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- Dashboard Statistics -->
+
+        <section class="stats" id="dashboard">
+
+            <article class="stat">
+                <div class="stat-top">
+                    <span>Connected sensors</span>
+                    <span class="icon blue">⌁</span>
+                </div>
+
+                <strong id="sensorCount">4</strong>
+                <small>Across monitored zones</small>
+            </article>
+
+            <article class="stat">
+                <div class="stat-top">
+                    <span>Normal status</span>
+                    <span class="icon green">✓</span>
+                </div>
+
+                <strong id="normalCount">3</strong>
+                <small>Sensor readings within limits</small>
+            </article>
+
+            <article class="stat alert-stat">
+                <div class="stat-top">
+                    <span>Active alerts</span>
+                    <span class="icon red">⚑</span>
+                </div>
+
+                <strong id="alertCount">1</strong>
+                <small>Requires attention</small>
+            </article>
+
+            <article class="stat">
+                <div class="stat-top">
+                    <span>Last updated</span>
+                    <span class="icon purple">◷</span>
+                </div>
+
+                <strong class="time" id="lastUpdated">--:--</strong>
+                <small>Local system time</small>
+            </article>
+
+        </section>
+
+
+        <!-- Sensor Overview -->
+
+        <section class="panel" id="sensors">
+
+            <div class="panel-heading">
+
+                <div>
+                    <h2>Sensor Overview</h2>
+                    <p>Smoke levels and device status by location</p>
+                </div>
+
+                <button class="outline" id="refreshBtn">
+                    ↻ Refresh
+                </button>
+
+            </div>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Sensor ID</th>
+                            <th>Location</th>
+                            <th>Smoke level</th>
+                            <th>Temperature</th>
+                            <th>Status</th>
+                            <th>Last reading</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="sensorTable"></tbody>
+
+                </table>
+
+            </div>
+
+            <div class="legend">
+                <span><i class="dot green"></i> Normal</span>
+                <span><i class="dot red"></i> Alert</span>
+                <span><i class="dot gray"></i> Offline</span>
+            </div>
+
+        </section>
+
+
+        <!-- Alerts and Reports -->
+
+        <section class="bottom-grid">
+
+            <article class="panel" id="alerts">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <h2>Recent Alerts</h2>
+                        <p>Events requiring attention</p>
+                    </div>
+
+                    <button class="outline" id="clearAlerts">
+                        Clear demo alerts
+                    </button>
+
+                </div>
+
+                <div id="alertList" class="alert-list"></div>
+
+            </article>
+
+
+            <article class="panel" id="reports">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <h2>System Summary</h2>
+                        <p>Current demo configuration</p>
+                    </div>
+
+                </div>
+
+                <div class="summary">
+
+                    <div>
+                        <span>Monitoring zones</span>
+                        <b>4</b>
+                    </div>
+
+                    <div>
+                        <span>Alert threshold</span>
+                        <b>70 ppm</b>
+                    </div>
+
+                    <div>
+                        <span>Monitoring mode</span>
+                        <b>Simulation</b>
+                    </div>
+
+                    <div>
+                        <span>Response</span>
+                        <b>Visual notification</b>
+                    </div>
+
+                </div>
+
+                <p class="disclaimer">
+                    This website is a demonstration dashboard with simulated readings.
+                    It is not connected to physical sensors and is not a substitute
+                    for certified fire alarm equipment.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <footer>
+            SmokeWatch · Smoke Detection Monitoring System · Student Project
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
